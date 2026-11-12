@@ -8,8 +8,19 @@ export default function () {
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
 
+    const [color, setColor] = useState(false);
+    const changeColor = () => {
+        if(window.scrollY >= 100){
+            setColor(true);
+        }else{
+            setColor(false);
+        };
+    };
+
+    window.addEventListener("scroll", changeColor)
+
     return(
-        <header className="header">
+        <header className={color ? "header header-bg" : "header"}>
             <Link to="/"><h2>Portafolio</h2></Link>
             <nav className="nav">
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
