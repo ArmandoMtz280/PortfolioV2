@@ -1,3 +1,4 @@
+import "../index.css"
 import HeroImg from "../components/HeroImg/HeroImg";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
